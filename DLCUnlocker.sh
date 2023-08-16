@@ -13,9 +13,18 @@ fi
 #       or overriding menu functions/variables.
 #
 scriptDir=$(dirname $0)
-. "$scriptDir/bash-menu.sh"
-installDir=$"$scriptDir/installTest"
+if [ $# = 0 ]; then
+    echo "No directory provided. Please specify a valid game directory."
+    exit
+fi
+installDir=$1
 bitness="Unknown"
+if [ ! -d $installDir ]; then
+    echo "Invalid directory provided. Please specify a valid game directory."
+    exit
+fi
+
+. "$scriptDir/bash-menu.sh"
 
 
 ################################
