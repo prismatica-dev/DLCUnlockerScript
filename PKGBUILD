@@ -1,6 +1,7 @@
+# Maintainer: lily.software (contact@lily.software)
 pkgname="dlcunlockerscript"
 pkgver="0.1.1"
-pkgrel="2"
+pkgrel="3"
 pkgdesc="Interactive script for installing SmokeAPI or CreamLinux on Linux."
 arch=(any)
 url="https://github.com/lily-software/DLCUnlockerScript"
@@ -31,10 +32,11 @@ package() {
   install -Dm644 "${pkgname}/assets/SmokeAPI/version64.dll" "${pkgdir}/usr/share/${pkgname}/assets/SmokeAPI/version64.dll"
 
   echo "Creating /usr/bin Script"
-  mkdir -p "${pkgdir}/usr/bin/${pkgname}"
-  echo "sh /usr/share/${pkgname}/DLCUnlocker.sh $@" >> "${pkgdir}/usr/bin/DLCUnlocker"
-  echo "sh /usr/share/${pkgname}/DLCUnlocker.sh $@" >> "${pkgdir}/usr/bin/dlcunlocker"
+  mkdir -p "${pkgdir}/usr/bin/"
+  echo "sh /usr/share/${pkgname}/DLCUnlocker.sh \"\$@\"" >> "${pkgdir}/usr/bin/DLCUnlocker"
+  echo "sh /usr/share/${pkgname}/DLCUnlocker.sh \"\$@\"" >> "${pkgdir}/usr/bin/dlcunlocker"
   chmod +x "${pkgdir}/usr/bin/DLCUnlocker"
+  chmod +x "${pkgdir}/usr/bin/dlcunlocker"
 
   echo "DLCUnlocker Installed"
 }
