@@ -1,6 +1,6 @@
 pkgname="dlcunlockerscript"
 pkgver="0.1.1"
-pkgrel="1"
+pkgrel="2"
 pkgdesc="Interactive script for installing SmokeAPI or CreamLinux on Linux."
 arch=(any)
 url="https://github.com/lily-software/DLCUnlockerScript"
@@ -33,6 +33,7 @@ package() {
   echo "Creating /usr/bin Script"
   mkdir -p "${pkgdir}/usr/bin/${pkgname}"
   echo "sh /usr/share/${pkgname}/DLCUnlocker.sh $@" >> "${pkgdir}/usr/bin/DLCUnlocker"
+  echo "sh /usr/share/${pkgname}/DLCUnlocker.sh $@" >> "${pkgdir}/usr/bin/dlcunlocker"
   chmod +x "${pkgdir}/usr/bin/DLCUnlocker"
 
   echo "DLCUnlocker Installed"
