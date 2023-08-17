@@ -18,7 +18,14 @@ if [ $# = 0 ]; then
     exit
 fi
 installDir=$1
+if [ ${#installDir} -lt 3 ]; then
+    echo "No directory provided. Please specify a valid game directory."
+    exit
+fi
+
+installDir=$1
 bitness="Unknown"
+
 if [ ! -d $installDir ]; then
     echo "Invalid directory provided. Please specify a valid game directory."
     exit
@@ -204,7 +211,7 @@ helpM() {
 }
 
 installerInfo() {
-    echo "[v0.1.0] [MIT License] DLC Unlocker Script"
+    echo "[v0.1.1] [MIT License] DLC Unlocker Script"
     echo "This is a free open source steam DLC unlocking script available from https://github.com/lily-software/DLCUnlockerScript"
     echo ""
 
