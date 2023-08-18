@@ -2,16 +2,23 @@
 A simple interactive bash script designed for installing SmokeAPI and CreamAPI on Windows and Linux (with or without Proton).
 
 ## Installing
-Either clone the repository through github or run
+### Cloning Repository
+The following git commands will clone the repository. Alternatively [directly download it as a .zip](https://github.com/lily-software/DLCUnlockerScript/archive/refs/heads/main.zip).
 ```
-git clone https://github.com/lily-software/DLCUnlockerScript
-cd DLCUnlockerScript
+git clone https://github.com/lily-software/dlcunlockerscript
+cd dlcunlockerscript
 ```
+
+### Arch User Repository
+Users on Arch-based Linux distributions can use the [AUR package instead](https://aur.archlinux.org/packages/dlcunlockerscript).
 
 ## Usage
 Run the script with the syntax `sh DLCUnlockerScript.sh C:/ExampleDirectory`
 
 You will then be taken through interactive prompts based on the mode and system on which you wish to install. The script will automatically install the required files and recommended configuration file (unless already present).
+
+### Arch Usage
+The PKGBUILD file automatically adds the commands 'DLCUnlocker' and 'dlcunlocker' to the /usr/bin directory. This functions the same to 'sh DLCUnlockerScript.sh' and can be used with the syntax `dlcunlocker /directory-here/`
 
 ## Linux Users
 For users running native Linux games through Steam with CreamLinux, you will only have to add `sh ./cream.sh %command%` to the game launch arguments in Steam.
