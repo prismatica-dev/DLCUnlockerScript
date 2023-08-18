@@ -6,7 +6,8 @@ pkgdesc="Interactive script for installing SmokeAPI or CreamLinux on Linux."
 arch=(any)
 url="https://github.com/lily-software/DLCUnlockerScript"
 license=("MIT")
-depends=("file")
+makedepends=("git")
+depends=("lib32-gcc-libs" "lib32-glibc" "glibc" "gcc-libs" "bash")
 source=("${pkgname%-git}::git+https://github.com/lily-software/DLCUnlockerScript.git")
 sha512sums=("SKIP")
 package() {
@@ -31,12 +32,16 @@ package() {
   install -Dm644 "${pkgname}/assets/SmokeAPI/version32.dll" "${pkgdir}/usr/share/${pkgname}/assets/SmokeAPI/version32.dll"
   install -Dm644 "${pkgname}/assets/SmokeAPI/version64.dll" "${pkgdir}/usr/share/${pkgname}/assets/SmokeAPI/version64.dll"
 
-  echo "Creating /usr/bin Script"
+  echo "Creating /usr/bin Scripts"
   mkdir -p "${pkgdir}/usr/bin/"
   echo "sh /usr/share/${pkgname}/DLCUnlocker.sh \"\$@\"" >> "${pkgdir}/usr/bin/DLCUnlocker"
   echo "sh /usr/share/${pkgname}/DLCUnlocker.sh \"\$@\"" >> "${pkgdir}/usr/bin/dlcunlocker"
   chmod +x "${pkgdir}/usr/bin/DLCUnlocker"
   chmod +x "${pkgdir}/usr/bin/dlcunlocker"
+
+  echo "Copying License"
+  mkdir -p "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -Dm644 "${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}"
 
   echo "DLCUnlocker Installed"
 }
