@@ -3,9 +3,9 @@ A simple interactive bash script designed for installing SmokeAPI and CreamAPI o
 
 ## Installing
 ### Cloning Repository
-The following git commands will clone the repository. Alternatively [directly download it as a .zip](https://github.com/lily-software/DLCUnlockerScript/archive/refs/heads/main.zip).
+The following git commands will clone the repository. Alternatively [directly download it as a .zip](https://github.com/prismatica-dev/DLCUnlockerScript/archive/refs/heads/main.zip).
 ```
-git clone https://github.com/lily-software/dlcunlockerscript
+git clone https://github.com/prismatica-dev/dlcunlockerscript
 cd dlcunlockerscript
 ```
 
@@ -44,7 +44,7 @@ SmokeAPI's hook mode tends to cause issues, try verifying the game files with St
 ### SmokeAPI/CreamLinux not loading
 The game may have protection from DLC Unlockers or you may have installed with the wrong bitness. Try swapping between hook and proxy modes.
 
-For Linux users, [ensure your Steam game launch arguments are correctly set.](https://github.com/lily-software/DLCUnlockerScript#linux-users).
+For Linux users, [ensure your Steam game launch arguments are correctly set.](https://github.com/prismatica-dev/DLCUnlockerScript#linux-users).
 
 ### DLC Not Unlocked
 With SmokeAPI, ensure a SmokeAPI.log.log file is being created when the game is launched as otherwise the installation has failed. Reinstall the default configuration file.
