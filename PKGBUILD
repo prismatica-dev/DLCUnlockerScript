@@ -1,7 +1,7 @@
 # Maintainer: lily.software (contact@lily.software)
 pkgname="dlcunlockerscript"
 pkgver="0.1.1"
-pkgrel="3"
+pkgrel="4"
 pkgdesc="Interactive script for installing SmokeAPI or CreamLinux on Linux."
 arch=(any)
 url="https://github.com/lily-software/DLCUnlockerScript"
@@ -22,7 +22,7 @@ package() {
   install -Dm644 "${pkgname}/assets/CreamLinux/cream_api.ini" "${pkgdir}/usr/share/${pkgname}/assets/CreamLinux/cream_api.ini"
   install -Dm644 "${pkgname}/assets/CreamLinux/cream.sh" "${pkgdir}/usr/share/${pkgname}/assets/CreamLinux/cream.sh"
   install -Dm644 "${pkgname}/assets/CreamLinux/lib32Creamlinux.so" "${pkgdir}/usr/share/${pkgname}/assets/CreamLinux/lib32Creamlinux.so"
-  install -Dm644 "${pkgname}/assets/CreamLinux/lib64Creamlinux.so" "${pkgdir}/usr/share/${pkgname}/assets/CreamLinux/lib64reamlinux.so"
+  install -Dm644 "${pkgname}/assets/CreamLinux/lib64Creamlinux.so" "${pkgdir}/usr/share/${pkgname}/assets/CreamLinux/lib64Creamlinux.so"
 
   echo "Installing DLCUnlocker (SmokeAPI)"
   mkdir -p "${pkgdir}/usr/share/${pkgname}/assets/SmokeAPI"
