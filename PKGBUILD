@@ -1,14 +1,14 @@
-# Maintainer: lily.software (contact@lily.software)
+# Maintainer: prismatica (contact@prismatica.dev)
 pkgname="dlcunlockerscript"
-pkgver="0.1.1"
-pkgrel="4"
+pkgver="0.1.2"
+pkgrel="1"
 pkgdesc="Interactive script for installing SmokeAPI or CreamLinux on Linux."
 arch=(any)
-url="https://github.com/lily-software/DLCUnlockerScript"
+url="https://github.com/prismatica-dev/DLCUnlockerScript"
 license=("MIT")
 makedepends=("git")
 depends=("lib32-gcc-libs" "lib32-glibc" "glibc" "gcc-libs" "bash")
-source=("${pkgname%-git}::git+https://github.com/lily-software/DLCUnlockerScript.git")
+source=("${pkgname%-git}::git+https://github.com/prismatica-dev/DLCUnlockerScript.git")
 sha512sums=("SKIP")
 package() {
   echo "Installing DLCUnlocker"
